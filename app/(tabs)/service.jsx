@@ -41,7 +41,7 @@ const service = () => {
     return (
         <SafeAreaView className="bg-white px-4 w-full h-[1000vh]">
             <ScrollView>
-                <View className="bg-primary px-4 h-24 flex-row justify-center items-center rounded-b-md">
+                <View className="bg-primary px-4 h-24 flex-row justify-center items-center rounded-b-md" keyboardShouldPersistTaps="always">
                     <Text className="mb-1">
                         <Link href="/home">
                             <FontAwesome name="arrow-left" size={18} color="#f9fafb" />
