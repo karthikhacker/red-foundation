@@ -56,21 +56,19 @@ const search = () => {
 
     return (
         <SafeAreaView className="bg-white w-full px-4 h-[100vh]">
-            <ScrollView >
-                <View className="bg-primary h-28 px-2 rounded-b-2xl justify-center items-center" keyboardShouldPersistTaps="always">
-                    <SearchBox
-                        value={searchText}
-                        handleChange={(e) => setSearchText(e)}
-                    />
-                </View>
-                {data.length < 1 && (<ShowMessage text='No Donor Found!' />)}
-                <View className="w-full mt-6">
-                    {data?.map(item => <SearchCard
-                        key={item._id}
-                        item={item}
-                    />)}
-                </View>
-            </ScrollView>
+            <View className="bg-primary h-28 px-2 rounded-b-2xl justify-center items-center">
+                <SearchBox
+                    value={searchText}
+                    handleChange={(e) => setSearchText(e)}
+                />
+            </View>
+            {data.length < 1 && (<ShowMessage text='No Donor Found!' />)}
+            <View className="w-full mt-6">
+                {data?.map(item => <SearchCard
+                    key={item._id}
+                    item={item}
+                />)}
+            </View>
             <StatusBar backgroundColor="#FFF" style='light' />
         </SafeAreaView>
     )
