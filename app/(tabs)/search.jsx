@@ -56,8 +56,8 @@ const search = () => {
 
     return (
         <SafeAreaView className="bg-white w-full px-4 h-[100vh]">
-            <ScrollView keyboardShouldPersistTaps="always">
-                <View className="bg-primary h-28 px-2 rounded-b-2xl justify-center items-center">
+            <ScrollView >
+                <View className="bg-primary h-28 px-2 rounded-b-2xl justify-center items-center" keyboardShouldPersistTaps="always">
                     <SearchBox
                         value={searchText}
                         handleChange={(e) => setSearchText(e)}
