@@ -30,7 +30,7 @@ const App = () => {
                         resizeMode='contain'
                     />
                     <CustomButton
-                        title="Continue"
+                        title="Cont"
                         containerStyle="mt-7 w-full"
                         handlePress={() => { router.push('/signin') }}
                     />
