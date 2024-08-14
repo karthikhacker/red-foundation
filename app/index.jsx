@@ -21,7 +21,7 @@ const App = () => {
     }
     console.log(process.env.EXPO_PUBLIC_BASE_URL)
     return (
-        <SafeAreaView className=" bg-white h-[100vh]">
+        <SafeAreaView className=" bg-white h-full">
             <ScrollView contentContainerStyle={{ height: '100%' }}>
                 <View className=" w-full h-full px-4 mt-7 items-center ">
                     <Image
@@ -30,7 +30,7 @@ const App = () => {
                         resizeMode='contain'
                     />
                     <CustomButton
-                        title="Cont"
+                        title="Continue"
                         containerStyle="mt-7 w-full"
                         handlePress={() => { router.push('/signin') }}
                     />

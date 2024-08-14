@@ -53,24 +53,16 @@ const search = () => {
     if (loading) {
         return <Loading />
     }
-
+    console.log(data);
     return (
-        <SafeAreaView className="bg-white w-full px-4 h-[100vh]">
-            <View className="bg-primary h-28 px-2 rounded-b-2xl justify-center items-center">
+        <View className="bg-white h-full w-full px-4">
+            <View className="w-full mt-16 bg-primary h-20 px-4 rounded-md">
                 <SearchBox
                     value={searchText}
-                    handleChange={(e) => setSearchText(e)}
+                    handleChange={e => setSearchText(e)}
                 />
             </View>
-            {data.length < 1 && (<ShowMessage text='No Donor Found!' />)}
-            <View className="w-full mt-6">
-                {data?.map(item => <SearchCard
-                    key={item._id}
-                    item={item}
-                />)}
-            </View>
-            <StatusBar backgroundColor="#FFF" style='light' />
-        </SafeAreaView>
+        </View>
     )
 }
 
